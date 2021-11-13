@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 
 namespace Versenyke
-{   
+{
     class szamocskak
     {
         public int szam;
     }
     class Program
-    {   
-            static List<szamocskak> adatok = new List<szamocskak>();
+    {
+        static List<szamocskak> adatok = new List<szamocskak>();
 
         static void Main(string[] args)
         {
@@ -35,8 +35,8 @@ namespace Versenyke
 
             //1. feladat
             //a) Hányszor fordul elő az 5-ös számjegy a fájlban tárolt számok között? (2 pont)
-            int dex=0;
-            int counter=0;
+            int dex = 0;
+            int counter = 0;
             for (dex = 0; dex < adatok.Count; dex++)
                 if (adatok[dex].szam == 5)
                     counter++;
@@ -49,8 +49,8 @@ namespace Versenyke
             for (dex = 0; dex < adatok.Count; dex++)
             {
 
-                        sw.Write("{0} ", Convert.ToString(adatok[dex]));
-                        if ((dex+1)%91==0)
+                sw.Write("{0} ", Convert.ToString(adatok[dex]));
+                if ((dex + 1) % 91 == 0)
                 {
                     sw.WriteLine();
                     soros++;
